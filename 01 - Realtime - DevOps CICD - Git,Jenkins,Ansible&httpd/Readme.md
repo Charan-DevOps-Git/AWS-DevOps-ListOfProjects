@@ -20,7 +20,7 @@ This project demonstrates a Continuous Integration and Continuous Deployment (CI
 - **HTTPD (Apache)**: Web server
 
 ## Project Architecture
-![](Images/project_architecture.jpg)
+![Project Architecture](Images/project_architecture.jpg)
 
 ## Setup and Installation
 
