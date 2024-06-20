@@ -20,7 +20,7 @@ This project demonstrates a Continuous Integration and Continuous Deployment (CI
 - **HTTPD (Apache)**: Web server
 
 ## Project Architecture
-![Project Architecture](Images/project_architecture.jpg)
+![Project Architecture](images/project_architecture.jpg)
 
 ## Setup and Installation
 
@@ -29,9 +29,9 @@ This project demonstrates a Continuous Integration and Continuous Deployment (CI
 - Connect using Putty/MobaXterm.
 - Modify instance security inbound rules to allow custom TCP 8080.
 
-![EC2 Instances](Images/EC2_Instances.jpg)
-![Servers](Images/servers.jpg)
-![Inbound Rules](Images/Inbound_Rule.jpg)
+![EC2 Instances](images/EC2_Instances.jpg)
+![Servers](images/servers.jpg)
+![Inbound Rules](images/Inbound_Rule.jpg)
 
 ### Step 2: Configure Git and Jenkins
 
@@ -69,9 +69,9 @@ This project demonstrates a Continuous Integration and Continuous Deployment (CI
 2. In GitHub, create a new repository and add a webhook: Settings -> Webhooks -> Add webhook -> Paste Jenkins API token into the secret field.
 3. Install Jenkins plugins: Manage Jenkins -> Plugins -> Available plugins -> Install "Publish Over SSH" plugin and restart Jenkins.
 
-![API Token](Images/apitoken_jenkins.jpg)
-![Webhook-Git](Images/Webhook_Git.jpg)
-![Publish Over SSH Plugin](Images/publish_over_ssh_plugin.jpg)
+![API Token](images/apitoken_jenkins.jpg)
+![Webhook-Git](images/Webhook_Git.jpg)
+![Publish Over SSH Plugin](images/publish_over_ssh_plugin.jpg)
 
 ### Step 5: Establish SSH Connections Between Machines
 1. Following steps should be done in all 3 machines
@@ -143,15 +143,15 @@ This project demonstrates a Continuous Integration and Continuous Deployment (CI
     ```
 3. File will be pushed to master branch, verify it on GitHub
 
-![GitHub Repo](Images/github_repo.jpg)
-![Access Token](Images/Personal_Access_Token.jpg)
+![GitHub Repo](images/github_repo.jpg)
+![Access Token](images/Personal_Access_Token.jpg)
 
 ### Step 9: Configure Jenkins & Ansible SSH Server
 1. Add SSH server: Jenkins -> Dashboard -> System -> SSH Server.
 2. Test connection with Jenkins and Ansible servers.
 
-![Jenkins](Images/SSH_Server_Jenkins.jpg)
-![Ansible](Images/SSH_Server_Ansible.jpg)
+![Jenkins](images/SSH_Server_Jenkins.jpg)
+![Ansible](images/SSH_Server_Ansible.jpg)
 
 ### Step 10: Create Jenkins Pipeline
 1. Source Code Management: Git.
@@ -161,28 +161,28 @@ This project demonstrates a Continuous Integration and Continuous Deployment (CI
 4. Save and build.
 5. Verify deployment in Ansible VM: `ls -l /opt/`
 
-![SCM](Images/SCM_Git.jpg)
-![Build Step](Images/build_step_jenkins.jpg)
-![Jenkins Pipeline](Images/Project_Jenkins.jpg)
+![SCM](images/SCM_Git.jpg)
+![Build Step](images/build_step_jenkins.jpg)
+![Jenkins Pipeline](images/Project_Jenkins.jpg)
 
 ### Step 11: Add Post Build Actions
 1. Add post build actions: Execute Ansible playbook `sample.yaml`.
 2. Save and build.
 3. Access web server public IP to see the deployed HTML file.
 
-![Post Build Action](Images/PostBuild_Ansible.jpg)
+![Post Build Action](images/PostBuild_Ansible.jpg)
 
 ### Step 12: Test CI/CD Pipeline
 1. Modify code in GitHub to trigger the build.
 2. Verify updates in web server IP address.
 
-![Web Server Output](Images/WebServer_Output.jpg)
+![Web Server Output](images/WebServer_Output.jpg)
 
 ## Console Output
 
-![Build-1](Images/output-1.jpg)
-![Build-2](Images/output-2.jpg)
-![Build-3](Images/output-3.jpg)
+![Build-1](images/output-1.jpg)
+![Build-2](images/output-2.jpg)
+![Build-3](images/output-3.jpg)
 
 ## Conclusion
 This project demonstrates the successful implementation of a CI/CD pipeline using Git, Jenkins, Ansible, and an HTTPD server. It automates the deployment process, ensuring efficient and reliable application delivery.
